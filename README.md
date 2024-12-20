@@ -18,8 +18,8 @@
 
 ### Routing
 
-- [ ] Configure main routes: `/` (Dashboard), `/settings` (Settings).
-- [ ] Ensure navigation between pages using React Router.
+- [x] Configure main routes: `/` (Dashboard), `/settings` (Settings).
+- [x] Ensure navigation between pages using React Router.
 
 ### Global State and Mock API
 

@@ -15,6 +15,13 @@ export default {
 				border: "var(--border)",
 				primary: "var(--primary)",
 			},
+			aspectRatio: {
+				card: "350 / 235"
+			}
+		},
+		fontFamily: {
+			inter: ['Inter', 'sans-serif'],
+			lato: ['Lato', 'sans-serif'],
 		},
 	},
   plugins: [],

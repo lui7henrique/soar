@@ -1,5 +1,8 @@
 import type { ComponentProps } from "react";
 import { cn } from "../lib/utils";
+import { Link } from "react-router-dom";
+import { CreditCard } from "../components/credit-card";
+import { RecentTransaction } from "../components/recent-transaction";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -30,16 +33,19 @@ const Card = {
 
 export function Dashboard() {
 	return (
-		<div className="grid grid-cols-3 px-10 py-6 gap-8 max-w-[1920px] mx-auto">
+		<div className="grid grid-cols-3 px-10 py-6 gap-8 max-w-[1180px] mx-auto">
 			<Card.Root className="col-span-2">
 				<Card.Header>
 					<Card.Title>My Cards</Card.Title>
-					<Card.Action>See all</Card.Action>
+
+					<Card.Action>
+						<Link to="/credit-cards">See all</Link>
+					</Card.Action>
 				</Card.Header>
 
 				<div className="grid grid-cols-2 gap-8">
-					<div className="aspect-[350/235] bg-background rounded-lg"></div>
-					<div className="aspect-[350/235] bg-background rounded-lg"></div>
+					<CreditCard />
+					<CreditCard variant="outline" />
 				</div>
 			</Card.Root>
 
@@ -48,8 +54,10 @@ export function Dashboard() {
 					<Card.Title>Recent Transaction</Card.Title>
 				</Card.Header>
 
-				<div className="aspect-[350/235] bg-background rounded-lg"></div>
+				<RecentTransaction />
 			</Card.Root>
+
+			{/* 
 
 			<Card.Root className="col-span-2">
 				<Card.Header>
@@ -81,7 +89,7 @@ export function Dashboard() {
 				</Card.Header>
 
 				<div className="aspect-[635/276] bg-background rounded-lg"></div>
-			</Card.Root>
+			</Card.Root> */}
 		</div>
 	);
 }
