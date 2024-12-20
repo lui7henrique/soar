@@ -10,7 +10,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 	return (
 		<div
 			className={cn(
-				"rounded-[25px] flex flex-col font-lato w-[350px] h-[235px]",
+				"rounded-[25px] flex flex-col font-lato w-[350px] h-[235px] flex-shrink-0",
 				variant === "outline" && "bg-background border",
 				variant === "default" &&
 					"bg-[linear-gradient(107.38deg,_#5B5A6F_2.61%,_#000000_101.2%)]",

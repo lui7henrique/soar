@@ -9,7 +9,8 @@ export default function RootLayout() {
 
 			<section className="flex flex-col">
 				<Header />
-				<main className="bg-background-alt h-[calc(100vh-100px)] overflow-y-auto">
+
+				<main className="desktop:bg-background-alt desktop:h-[calc(100vh-100px)] overflow-y-auto">
 					<Outlet />
 				</main>
 			</section>

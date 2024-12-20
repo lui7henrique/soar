@@ -13,13 +13,16 @@ const Card = {
 		<div className={cn(className, "space-y-5")} {...props} />
 	),
 	Header: ({ className, ...props }: ComponentProps<"div">) => (
-		<div className={cn(className, "flex justify-between")} {...props} />
+		<div
+			className={cn(className, "flex justify-between items-center")}
+			{...props}
+		/>
 	),
 	Title: ({ className, ...props }: ComponentProps<"div">) => (
 		<h4
 			className={cn(
 				className,
-				"font-semibold text-[22px] text-muted-foreground",
+				"font-semibold text-md text-muted-foreground desktop:text-[22px]",
 			)}
 			{...props}
 		/>
@@ -28,7 +31,7 @@ const Card = {
 		<span
 			className={cn(
 				className,
-				"font-semibold text-[22px] text-muted-foreground",
+				"font-semibold text-md text-muted-foreground desktop:text-[22px]",
 			)}
 			{...props}
 		/>
@@ -39,8 +42,8 @@ export function Dashboard() {
 	return (
 		<div
 			className={cn(
-				"px-10 py-6 gap-8 max-w-[1180px] mx-auto flex flex-col",
-				"desktop:grid desktop:grid-cols-3",
+				"gap-8 px-6 flex flex-col",
+				"desktop:grid desktop:grid-cols-3 desktop:px-10 desktop:py-6 desktop:max-w-[1180px] desktop:mx-auto",
 			)}
 		>
 			<Card.Root className="col-span-2">
@@ -52,7 +55,7 @@ export function Dashboard() {
 					</Card.Action>
 				</Card.Header>
 
-				<div className="grid grid-cols-2 gap-8">
+				<div className="flex gap-4 overflow-x-auto scrollbar-hide -mx-6 px-6">
 					<CreditCard />
 					<CreditCard variant="outline" />
 				</div>
