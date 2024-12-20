@@ -5,6 +5,7 @@ import { CreditCard } from "../components/credit-card";
 import { RecentTransaction } from "../components/recent-transaction";
 import { WeeklyActivity } from "../components/weekly-activity";
 import { ExpenseStatistics } from "../components/expense-statistics";
+import { QuickTransfer } from "../components/quick-transfer";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -75,19 +76,21 @@ export function Dashboard() {
 				<ExpenseStatistics />
 			</Card.Root>
 
+			<Card.Root className="col-span-1">
+				<Card.Header>
+					<Card.Title>Quick Transfer</Card.Title>
+				</Card.Header>
+
+				<QuickTransfer />
+			</Card.Root>
+
 			{/* 
 
 			
 
 		
 
-			<Card.Root className="col-span-1">
-				<Card.Header>
-					<Card.Title>Quick Transfer</Card.Title>
-				</Card.Header>
-
-				<div className="bg-background rounded-lg"></div>
-			</Card.Root>
+		
 
 			<Card.Root className="col-span-2">
 				<Card.Header>

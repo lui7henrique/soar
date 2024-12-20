@@ -35,10 +35,10 @@
 - [ ] "Recent Transactions" section:
   - [x] List recent transactions with an icon, description, date, and amount.
   - [x] Make the list scrollable if there are many transactions.
-- [ ] "Weekly Activity Chart" section:
-  - [ ] Create a bar chart (Chart.js/D3.js) for daily deposits/withdrawals.
-- [ ] "Expense Statistics" (Pie Chart) section:
-  - [ ] Create a pie chart with a breakdown by category (Entertainment, Bills, Investments, Others).
+- [x] "Weekly Activity Chart" section:
+  - [x] Create a bar chart (Chart.js/D3.js) for daily deposits/withdrawals.
+- [x] "Expense Statistics" (Pie Chart) section:
+  - [x] Create a pie chart with a breakdown by category (Entertainment, Bills, Investments, Others).
 - [ ] "Quick Transfer" section:
   - [ ] Display a list of frequent transfer contacts with photo, name, and role.
   - [ ] Input field for transfer amount.

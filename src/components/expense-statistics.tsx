@@ -24,7 +24,7 @@ export function ExpenseStatistics() {
 		outerRadius,
 		percent,
 		name,
-		// biome-ignore lint/suspicious/noExplicitAny: <explanation>
+		// biome-ignore lint/suspicious/noExplicitAny: by default the recharts typing is "any" in these cases
 	}: any) => {
 		const RADIAN = Math.PI / 180;
 		const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -57,7 +57,7 @@ export function ExpenseStatistics() {
 					<Pie
 						data={data}
 						labelLine={false}
-						label={(props) => renderCustomLabel(props)}
+						label={renderCustomLabel}
 						dataKey="value"
 						className="outline-none"
 					>
