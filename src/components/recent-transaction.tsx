@@ -58,14 +58,18 @@ export function RecentTransaction() {
 						</div>
 
 						<div>
-							<p className="text-foreground font-medium">{transaction.label}</p>
-							<p className="text-[#718EBF]">{transaction.createdAt}</p>
+							<p className="text-foreground font-medium text-sm desktop:text-md">
+								{transaction.label}
+							</p>
+							<p className="text-[#718EBF] text-sm desktop:text-md">
+								{transaction.createdAt}
+							</p>
 						</div>
 					</div>
 
 					<p
 						className={cn(
-							"font-medium",
+							"font-medium text-sm desktop:text-md",
 							transaction.type === "INCOME"
 								? "text-[#FF4B4A]"
 								: "text-[#41D4A8]",

@@ -9,6 +9,8 @@ import {
 } from "recharts";
 import type { Props } from "recharts/types/component/DefaultLegendContent";
 import { v4 } from "uuid";
+import { cn } from "../lib/utils";
+import { useMediaQuery } from "../hooks/use-media-query";
 
 const data = [
 	{ day: "Sat", withdraw: 450, deposit: 220 },
@@ -41,12 +43,19 @@ const renderCustomLegend = (props: Props) => {
 };
 
 export function WeeklyActivity() {
+	const isDesktop = useMediaQuery("(min-width: 1280px)");
+
 	return (
-		<div className="aspect-[730/322] bg-background rounded-3xl">
-			<ResponsiveContainer className="p-8">
+		<div
+			className={cn(
+				"bg-background rounded-3xl w-[325px] h-[254px]",
+				"desktop:w-[730px] desktop:h-[322px]",
+			)}
+		>
+			<ResponsiveContainer className="desktop:p-8">
 				<BarChart
 					data={data}
-					barGap={12}
+					barGap={isDesktop ? 12 : 5}
 					margin={{ left: 0, right: 0, bottom: 0, top: 0 }}
 				>
 					<Legend
@@ -80,13 +89,14 @@ export function WeeklyActivity() {
 						dataKey="withdraw"
 						fill="#232323"
 						radius={[30, 30, 30, 30]}
-						barSize={16}
+						barSize={isDesktop ? 16 : 7}
 					/>
+
 					<Bar
 						dataKey="deposit"
 						fill="#396AFF"
 						radius={[30, 30, 30, 30]}
-						barSize={16}
+						barSize={isDesktop ? 16 : 7}
 					/>
 				</BarChart>
 			</ResponsiveContainer>
