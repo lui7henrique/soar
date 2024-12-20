@@ -2,7 +2,7 @@
 
 - [x] Set up a React project (using `create-react-app` or similar).
 - [x] Install React Router dependencies (e.g., `react-router-dom`).
-- [ ] Install state management dependencies (Redux or Context API).
+- [x] Install state management dependencies (Redux or Context API).
 - [ ] Install a chart library (Chart.js or D3.js).
 - [ ] Install a styling library (TailwindCSS, Styled-Components, or another).
 - [ ] Set up a Git repository and create the initial branching structure.
@@ -30,11 +30,11 @@
 ### Dashboard Page (Overview)
 
 - [ ] "My Cards" section:
-  - [ ] Create a component to display cards with balance, cardholder name, and masked card number.
-  - [ ] "See All" button (optional) to navigate to a detailed cards list page.
+  - [x] Create a component to display cards with balance, cardholder name, and masked card number.
+  - [x] "See All" button (optional) to navigate to a detailed cards list page.
 - [ ] "Recent Transactions" section:
-  - [ ] List recent transactions with an icon, description, date, and amount.
-  - [ ] Make the list scrollable if there are many transactions.
+  - [x] List recent transactions with an icon, description, date, and amount.
+  - [x] Make the list scrollable if there are many transactions.
 - [ ] "Weekly Activity Chart" section:
   - [ ] Create a bar chart (Chart.js/D3.js) for daily deposits/withdrawals.
 - [ ] "Expense Statistics" (Pie Chart) section:

@@ -3,6 +3,7 @@ import { cn } from "../lib/utils";
 import { Link } from "react-router-dom";
 import { CreditCard } from "../components/credit-card";
 import { RecentTransaction } from "../components/recent-transaction";
+import { WeeklyActivity } from "../components/weekly-activity";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -57,15 +58,17 @@ export function Dashboard() {
 				<RecentTransaction />
 			</Card.Root>
 
-			{/* 
-
 			<Card.Root className="col-span-2">
 				<Card.Header>
 					<Card.Title>Weekly Activity</Card.Title>
 				</Card.Header>
 
-				<div className="aspect-[730/322] bg-background rounded-lg"></div>
+				<WeeklyActivity />
 			</Card.Root>
+
+			{/* 
+
+			
 
 			<Card.Root className="col-span-1">
 				<Card.Header>
