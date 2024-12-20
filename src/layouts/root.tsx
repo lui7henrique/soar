@@ -8,7 +8,7 @@ export default function RootLayout() {
 			<Sidebar />
 			<section className="flex flex-col">
 				<Header />
-				<main className="bg-background-alt h-[calc(100vh-100px)] overflow-y-auto p-4">
+				<main className="bg-background-alt h-[calc(100vh-100px)] overflow-y-auto">
 					<Outlet />
 				</main>
 			</section>

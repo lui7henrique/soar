@@ -1,7 +1,7 @@
 ### Environment Setup and Tools
 
 - [x] Set up a React project (using `create-react-app` or similar).
-- [ ] Install React Router dependencies (e.g., `react-router-dom`).
+- [x] Install React Router dependencies (e.g., `react-router-dom`).
 - [ ] Install state management dependencies (Redux or Context API).
 - [ ] Install a chart library (Chart.js or D3.js).
 - [ ] Install a styling library (TailwindCSS, Styled-Components, or another).
@@ -10,8 +10,8 @@
 
 ### Folder Structure and Components
 
-- [ ] Create a `src/components` folder for reusable components.
-- [ ] Create a `src/pages` folder for pages (Dashboard, Settings).
+- [x] Create a `src/components` folder for reusable components.
+- [x] Create a `src/pages` folder for pages (Dashboard, Settings).
 - [ ] Create a `src/store` folder (for Redux) or `src/context` (for Context API) to handle global state.
 - [ ] Create a `src/services` folder for API calls (mocks).
 - [ ] Create a `src/assets` folder for images, icons, etc.
