@@ -17,6 +17,9 @@ export default {
 			},
 			aspectRatio: {
 				card: "350 / 235"
+			},
+			screens: {
+				'desktop': '1280px',
 			}
 		},
 		fontFamily: {

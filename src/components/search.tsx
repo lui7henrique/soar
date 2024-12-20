@@ -1,8 +1,18 @@
+import type { ComponentProps } from "react";
 import { svgs } from "./icons";
+import { cn } from "../lib/utils";
 
-export function Search() {
+type SearchProps = ComponentProps<"div">;
+
+export function Search({ className, ...props }: SearchProps) {
 	return (
-		<div className="rounded-[40px] bg-background-alt h-[50px] px-6 text-[#8BA3CB] gap-4 flex items-center">
+		<div
+			className={cn(
+				"rounded-[40px] bg-background-alt h-[50px] px-6 text-[#8BA3CB] gap-4 items-center flex",
+				className,
+			)}
+			{...props}
+		>
 			{svgs.search}
 
 			<input

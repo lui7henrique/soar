@@ -37,7 +37,12 @@ const Card = {
 
 export function Dashboard() {
 	return (
-		<div className="grid grid-cols-3 px-10 py-6 gap-8 max-w-[1180px] mx-auto">
+		<div
+			className={cn(
+				"px-10 py-6 gap-8 max-w-[1180px] mx-auto flex flex-col",
+				"desktop:grid desktop:grid-cols-3",
+			)}
+		>
 			<Card.Root className="col-span-2">
 				<Card.Header>
 					<Card.Title>My Cards</Card.Title>
@@ -77,7 +82,12 @@ export function Dashboard() {
 				<ExpenseStatistics />
 			</Card.Root>
 
-			<div className="col-span-3 grid grid-cols-[445px_1fr] gap-[30px]">
+			<div
+				className={cn(
+					"flex flex-col",
+					"desktop:col-span-3 desktop:grid desktop:grid-cols-[445px_1fr] desktop:gap-[30px]",
+				)}
+			>
 				<Card.Root>
 					<Card.Header>
 						<Card.Title>Quick Transfer</Card.Title>

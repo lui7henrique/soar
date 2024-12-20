@@ -55,7 +55,7 @@ export function Sidebar() {
 	const pathname = location.pathname;
 
 	return (
-		<aside className="h-screen border-r px-10 py-8 space-y-8">
+		<aside className="h-screen border-r px-10 py-8 space-y-8 hidden desktop:block">
 			<div className="flex gap-2.5 font-extrabold text-[25px]">
 				{svgs.task}
 				<span className="text-muted-foreground">Soar task</span>
