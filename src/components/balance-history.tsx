@@ -6,8 +6,8 @@ import {
 	CartesianGrid,
 	Area,
 } from "recharts";
-import { cn } from "../lib/utils";
-import { BALANCE_HISTORY } from "../mocks";
+import { cn } from "@/lib/utils";
+import { BALANCE_HISTORY } from "@/mocks";
 
 export function BalanceHistory() {
 	return (

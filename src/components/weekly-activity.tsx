@@ -1,3 +1,6 @@
+import { useMediaQuery } from "@/hooks/use-media-query";
+import { cn } from "@/lib/utils";
+import { MOCK_WEEKLY_ACTIVITY } from "@/mocks";
 import {
 	Bar,
 	BarChart,
@@ -9,9 +12,6 @@ import {
 } from "recharts";
 import type { Props } from "recharts/types/component/DefaultLegendContent";
 import { v4 } from "uuid";
-import { cn } from "../lib/utils";
-import { useMediaQuery } from "../hooks/use-media-query";
-import { MOCK_WEEKLY_ACTIVITY } from "../mocks";
 
 const renderCustomLegend = (props: Props) => {
 	const { payload } = props;

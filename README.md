@@ -64,11 +64,11 @@
 #### **Technical Requirements**
 
 - **Frameworks/Libraries**
-  - [ ] Use React.js as the primary framework.
+  - [x] Use React.js as the primary framework.
   - [ ] Implement state management with Redux or Context API.
-  - [ ] Use TailwindCSS or styled-components for styling.
+  - [x] Use TailwindCSS or styled-components for styling.
 - **API Integration**
-  - [ ] Mock dummy API endpoints for user information, card details, transaction history, and chart data.
+  - [x] Mock dummy API endpoints for user information, card details, transaction history, and chart data.
 - **Routing**
   - [ ] Use React Router for navigation between "Dashboard" and "Settings" pages.
 - **Charting Library**
@@ -99,3 +99,10 @@
 ---
 
 This checklist ensures all project requirements are met systematically.
+
+# observações
+
+- algumas medidas do layout no figma possuem valores que nao sao multiplos de 8, causando um "desconforto" visual a longo prazo
+  uma melhoria pertinente seria repassarp por esses valores
+- outra melhoria seria considerar mapear todos as cores da aplicação e ter definido no figma para evitar o uso de cores soltas
+- pelo minha disponibilidade de tempo, eu to usando mock diretamente no código, mas em um universo ideal, eu usaria um msw (preferencialmente) ou json-server para mockar ter acesso aos estados de loading da aplicação 🤝

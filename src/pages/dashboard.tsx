@@ -1,13 +1,13 @@
 import type { ComponentProps } from "react";
 import { cn } from "../lib/utils";
 import { Link } from "react-router-dom";
-import { CreditCard } from "../components/credit-card";
-import { RecentTransaction } from "../components/recent-transaction";
-import { WeeklyActivity } from "../components/weekly-activity";
-import { ExpenseStatistics } from "../components/expense-statistics";
-import { QuickTransfer } from "../components/quick-transfer";
-import { BalanceHistory } from "../components/balance-history";
-import { MOCK_CREDIT_CARDS } from "../mocks";
+import { CreditCard } from "@/components/credit-card";
+import { RecentTransaction } from "@/components/recent-transaction";
+import { WeeklyActivity } from "@/components/weekly-activity";
+import { ExpenseStatistics } from "@/components/expense-statistics";
+import { QuickTransfer } from "@/components/quick-transfer";
+import { BalanceHistory } from "@/components/balance-history";
+import { MOCK_CREDIT_CARDS } from "@/mocks";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (

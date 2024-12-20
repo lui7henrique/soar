@@ -1,10 +1,10 @@
 "use client";
 
 import { svgs } from "./icons";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Search } from "./search";
-import user from "../assets/user.jpg";
-import { useMediaQuery } from "../hooks/use-media-query";
+import user from "@/assets/user.jpg";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 const title = {
 	"/": "Overview",
@@ -41,9 +41,9 @@ export function Header() {
 						{svgs.notification}
 					</button>
 
-					<figure className="relative size-[60px]">
+					<Link to="/setting" className="relative size-[60px]">
 						<img src={user} className="rounded-full" alt="user" />
-					</figure>
+					</Link>
 				</div>
 			</header>
 		);
@@ -58,9 +58,9 @@ export function Header() {
 					{title[pathname as keyof typeof title]}
 				</h1>
 
-				<figure className="relative size-[60px]">
+				<Link to="/setting" className="relative size-[60px]">
 					<img src={user} className="rounded-full" alt="user" />
-				</figure>
+				</Link>
 			</div>
 
 			<Search className="flex desktop:hidden" />

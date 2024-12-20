@@ -1,6 +1,6 @@
-import { cn } from "../lib/utils";
-import { MOCK_TRANSACTIONS } from "../mocks";
+import { MOCK_TRANSACTIONS } from "@/mocks";
 import { svgs } from "./icons";
+import { cn } from "@/lib/utils";
 
 export function RecentTransaction() {
 	const svgByCategory: Record<

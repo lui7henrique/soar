@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
-import { cn } from "../lib/utils";
 import { svgs } from "./icons";
+import { cn } from "@/lib/utils";
 
 type CreditCardProps = {
 	variant?: "default" | "outline";

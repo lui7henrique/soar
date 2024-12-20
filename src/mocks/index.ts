@@ -1,10 +1,10 @@
 import { v4 } from "uuid";
 
-import liviaBator from "../assets/livia-bator.png";
-import randyPress from "../assets/randy-press.png";
-import workman1 from "../assets/workman-1.png";
-import workman2 from "../assets/workman-2.png";
-import workman3 from "../assets/workman-3.png";
+import liviaBator from "@/assets/livia-bator.png";
+import randyPress from "@/assets/randy-press.png";
+import workman1 from "@/assets/workman-1.png";
+import workman2 from "@/assets/workman-2.png";
+import workman3 from "@/assets/workman-3.png";
 
 export const MOCK_CREDIT_CARDS = [
 	{

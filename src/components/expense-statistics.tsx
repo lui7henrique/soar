@@ -1,6 +1,6 @@
+import { MOCK_EXPENSE_STATISTICS } from "@/mocks";
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
 import { v4 } from "uuid";
-import { MOCK_EXPENSE_STATISTICS } from "../mocks";
 
 const COLORS = [
 	"hsl(232, 45%, 35%)",

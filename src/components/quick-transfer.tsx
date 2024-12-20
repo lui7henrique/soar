@@ -1,9 +1,9 @@
 import { svgs } from "./icons";
 import { useCallback, useState } from "react";
-import { cn } from "../lib/utils";
 
 import useEmblaCarousel from "embla-carousel-react";
-import { LAST_TRANSFERS } from "../mocks";
+import { cn } from "@/lib/utils";
+import { LAST_TRANSFERS } from "@/mocks";
 
 export function QuickTransfer() {
 	const [selectedPerson, setSelectedPerson] = useState<
