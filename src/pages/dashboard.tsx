@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { CreditCard } from "../components/credit-card";
 import { RecentTransaction } from "../components/recent-transaction";
 import { WeeklyActivity } from "../components/weekly-activity";
+import { ExpenseStatistics } from "../components/expense-statistics";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -66,17 +67,19 @@ export function Dashboard() {
 				<WeeklyActivity />
 			</Card.Root>
 
-			{/* 
-
-			
-
 			<Card.Root className="col-span-1">
 				<Card.Header>
 					<Card.Title>Expense Statistics</Card.Title>
 				</Card.Header>
 
-				<div className="aspect-[350/322] bg-background rounded-lg"></div>
+				<ExpenseStatistics />
 			</Card.Root>
+
+			{/* 
+
+			
+
+		
 
 			<Card.Root className="col-span-1">
 				<Card.Header>
