@@ -7,6 +7,7 @@ import { WeeklyActivity } from "../components/weekly-activity";
 import { ExpenseStatistics } from "../components/expense-statistics";
 import { QuickTransfer } from "../components/quick-transfer";
 import { BalanceHistory } from "../components/balance-history";
+import { MOCK_CREDIT_CARDS } from "../mocks";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -55,9 +56,13 @@ export function Dashboard() {
 					</Card.Action>
 				</Card.Header>
 
-				<div className="flex gap-4 overflow-x-auto scrollbar-hide -mx-6 px-6">
-					<CreditCard />
-					<CreditCard variant="outline" />
+				<div className="flex gap-5 overflow-x-auto scrollbar-hide px-6 -mx-6 desktop:mx-none desktop:px-none">
+					{MOCK_CREDIT_CARDS.map((creditCard) => (
+						<CreditCard
+							variant={creditCard.main ? "default" : "outline"}
+							key={creditCard.id}
+						/>
+					))}
 				</div>
 			</Card.Root>
 

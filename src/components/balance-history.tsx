@@ -7,16 +7,7 @@ import {
 	Area,
 } from "recharts";
 import { cn } from "../lib/utils";
-
-const data = [
-	{ month: "Jul", balance: 150 },
-	{ month: "Aug", balance: 315 },
-	{ month: "Sep", balance: 450 },
-	{ month: "Oct", balance: 750 },
-	{ month: "Nov", balance: 250 },
-	{ month: "Dec", balance: 550 },
-	{ month: "Jan", balance: 650 },
-];
+import { BALANCE_HISTORY } from "../mocks";
 
 export function BalanceHistory() {
 	return (
@@ -29,7 +20,7 @@ export function BalanceHistory() {
 		>
 			<ResponsiveContainer className="">
 				<AreaChart
-					data={data}
+					data={BALANCE_HISTORY}
 					margin={{ top: 0, right: 0, left: 0, bottom: 0 }}
 				>
 					<defs>

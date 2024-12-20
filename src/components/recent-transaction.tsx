@@ -1,33 +1,10 @@
 import { cn } from "../lib/utils";
+import { MOCK_TRANSACTIONS } from "../mocks";
 import { svgs } from "./icons";
-
-const TRANSACTIONS = [
-	{
-		label: "Deposit from my Card",
-		createdAt: "28 January 2021",
-		amount: 850,
-		type: "EXPENSE",
-		category: "CARD",
-	},
-	{
-		label: "Deposit Paypal",
-		createdAt: "25 January 2021",
-		amount: 2500,
-		type: "INCOME",
-		category: "PAYPAL",
-	},
-	{
-		label: "Jemi Wilson",
-		createdAt: "21 January 2021",
-		amount: 5400,
-		type: "INCOME",
-		category: "TRANSFER",
-	},
-] as const;
 
 export function RecentTransaction() {
 	const svgByCategory: Record<
-		(typeof TRANSACTIONS)[number]["category"],
+		(typeof MOCK_TRANSACTIONS)[number]["category"],
 		JSX.Element
 	> = {
 		CARD: svgs.cards,
@@ -37,7 +14,7 @@ export function RecentTransaction() {
 
 	return (
 		<ul className="bg-background aspect-[350px] h-[235px] rounded-[25px] desktop:p-6 space-y-2.5 overflow-y-auto">
-			{TRANSACTIONS.map((transaction) => (
+			{MOCK_TRANSACTIONS.map((transaction) => (
 				<li
 					className="flex gap-4 items-center justify-between"
 					key={transaction.createdAt}

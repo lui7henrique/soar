@@ -1,12 +1,6 @@
 import { Cell, Pie, PieChart, ResponsiveContainer } from "recharts";
 import { v4 } from "uuid";
-
-const data = [
-	{ name: "Entertainment", value: 30 },
-	{ name: "Investment", value: 20 },
-	{ name: "Bill Expense", value: 30 },
-	{ name: "Others", value: 15 },
-];
+import { MOCK_EXPENSE_STATISTICS } from "../mocks";
 
 const COLORS = [
 	"hsl(232, 45%, 35%)",
@@ -24,7 +18,7 @@ export function ExpenseStatistics() {
 		outerRadius,
 		percent,
 		name,
-		// biome-ignore lint/suspicious/noExplicitAny: by default the recharts typing is "any" in these cases
+		// biome-ignore lint/suspicious/noExplicitAny: by default the recharts typing is "any"
 	}: any) => {
 		const RADIAN = Math.PI / 180;
 		const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -55,13 +49,13 @@ export function ExpenseStatistics() {
 			<ResponsiveContainer width="100%" height="100%">
 				<PieChart>
 					<Pie
-						data={data}
+						data={MOCK_EXPENSE_STATISTICS}
 						labelLine={false}
 						label={renderCustomLabel}
 						dataKey="value"
 						className="outline-none"
 					>
-						{data.map((_entry, index) => (
+						{MOCK_EXPENSE_STATISTICS.map((_entry, index) => (
 							<Cell
 								key={v4()}
 								fill={COLORS[index % COLORS.length]}

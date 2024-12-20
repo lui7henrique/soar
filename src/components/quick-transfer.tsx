@@ -1,52 +1,13 @@
 import { svgs } from "./icons";
 import { useCallback, useState } from "react";
-import { v4 } from "uuid";
 import { cn } from "../lib/utils";
 
-import liviaBator from "../assets/livia-bator.png";
-import randyPress from "../assets/randy-press.png";
-import workman1 from "../assets/workman-1.png";
-import workman2 from "../assets/workman-2.png";
-import workman3 from "../assets/workman-3.png";
-
 import useEmblaCarousel from "embla-carousel-react";
-
-const people = [
-	{
-		id: v4(),
-		name: "Livia Bator",
-		role: "CEO",
-		image: liviaBator,
-	},
-	{
-		id: v4(),
-		name: "Randy Press",
-		role: "Director",
-		image: randyPress,
-	},
-	{
-		id: v4(),
-		name: "Workman",
-		role: "Designer",
-		image: workman1,
-	},
-	{
-		id: v4(),
-		name: "Workman",
-		role: "Designer",
-		image: workman2,
-	},
-	{
-		id: v4(),
-		name: "Workman",
-		role: "Designer",
-		image: workman3,
-	},
-] as const;
+import { LAST_TRANSFERS } from "../mocks";
 
 export function QuickTransfer() {
 	const [selectedPerson, setSelectedPerson] = useState<
-		(typeof people)[number] | null
+		(typeof LAST_TRANSFERS)[number] | null
 	>(null);
 
 	const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -63,7 +24,7 @@ export function QuickTransfer() {
 			<div className="flex items-center gap-[21px] desktop:gap-[33px]">
 				<div className="overflow-hidden" ref={emblaRef}>
 					<div className="flex">
-						{people.map((person) => {
+						{LAST_TRANSFERS.map((person) => {
 							const isActive = selectedPerson?.id === person.id;
 
 							return (

@@ -17,3 +17,15 @@ body {
   background: var(--background);
   font-family: Inter, sans-serif;
 }
+
+::-webkit-scrollbar {
+  @apply w-1.5 h-2.5;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-muted border-[0px] border-transparent border-solid bg-clip-padding;
+}

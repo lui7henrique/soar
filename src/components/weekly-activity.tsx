@@ -11,16 +11,7 @@ import type { Props } from "recharts/types/component/DefaultLegendContent";
 import { v4 } from "uuid";
 import { cn } from "../lib/utils";
 import { useMediaQuery } from "../hooks/use-media-query";
-
-const data = [
-	{ day: "Sat", withdraw: 450, deposit: 220 },
-	{ day: "Sun", withdraw: 320, deposit: 120 },
-	{ day: "Mon", withdraw: 300, deposit: 250 },
-	{ day: "Tue", withdraw: 450, deposit: 350 },
-	{ day: "Wed", withdraw: 150, deposit: 220 },
-	{ day: "Thu", withdraw: 400, deposit: 230 },
-	{ day: "Fri", withdraw: 380, deposit: 320 },
-];
+import { MOCK_WEEKLY_ACTIVITY } from "../mocks";
 
 const renderCustomLegend = (props: Props) => {
 	const { payload } = props;
@@ -54,7 +45,7 @@ export function WeeklyActivity() {
 		>
 			<ResponsiveContainer className="desktop:p-8">
 				<BarChart
-					data={data}
+					data={MOCK_WEEKLY_ACTIVITY}
 					barGap={isDesktop ? 12 : 5}
 					margin={{ left: 0, right: 0, bottom: 0, top: 0 }}
 				>
