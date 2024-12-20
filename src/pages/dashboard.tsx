@@ -6,6 +6,7 @@ import { RecentTransaction } from "../components/recent-transaction";
 import { WeeklyActivity } from "../components/weekly-activity";
 import { ExpenseStatistics } from "../components/expense-statistics";
 import { QuickTransfer } from "../components/quick-transfer";
+import { BalanceHistory } from "../components/balance-history";
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -76,29 +77,23 @@ export function Dashboard() {
 				<ExpenseStatistics />
 			</Card.Root>
 
-			<Card.Root className="col-span-1">
-				<Card.Header>
-					<Card.Title>Quick Transfer</Card.Title>
-				</Card.Header>
+			<div className="col-span-3 grid grid-cols-[445px_1fr] gap-[30px]">
+				<Card.Root>
+					<Card.Header>
+						<Card.Title>Quick Transfer</Card.Title>
+					</Card.Header>
 
-				<QuickTransfer />
-			</Card.Root>
+					<QuickTransfer />
+				</Card.Root>
 
-			{/* 
+				<Card.Root className="col-span-1">
+					<Card.Header>
+						<Card.Title>Balance History</Card.Title>
+					</Card.Header>
 
-			
-
-		
-
-		
-
-			<Card.Root className="col-span-2">
-				<Card.Header>
-					<Card.Title>Balance History</Card.Title>
-				</Card.Header>
-
-				<div className="aspect-[635/276] bg-background rounded-lg"></div>
-			</Card.Root> */}
+					<BalanceHistory />
+				</Card.Root>
+			</div>
 		</div>
 	);
 }

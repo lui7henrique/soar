@@ -44,7 +44,11 @@ export function WeeklyActivity() {
 	return (
 		<div className="aspect-[730/322] bg-background rounded-3xl">
 			<ResponsiveContainer className="p-8">
-				<BarChart data={data} barGap={12}>
+				<BarChart
+					data={data}
+					barGap={12}
+					margin={{ left: 0, right: 0, bottom: 0, top: 0 }}
+				>
 					<Legend
 						verticalAlign="top"
 						align="right"
@@ -65,10 +69,11 @@ export function WeeklyActivity() {
 					<YAxis
 						axisLine={false}
 						tickLine={false}
-						tickMargin={8}
+						tickMargin={0}
 						tick={{ fill: "#718EBF", fontSize: 12, fontWeight: 500 }}
 						ticks={[0, 100, 200, 300, 400, 500]}
 						domain={[0, 500]}
+						width={30}
 					/>
 
 					<Bar
@@ -76,14 +81,12 @@ export function WeeklyActivity() {
 						fill="#232323"
 						radius={[30, 30, 30, 30]}
 						barSize={16}
-						isAnimationActive={false}
 					/>
 					<Bar
 						dataKey="deposit"
 						fill="#396AFF"
 						radius={[30, 30, 30, 30]}
 						barSize={16}
-						isAnimationActive={false}
 					/>
 				</BarChart>
 			</ResponsiveContainer>
