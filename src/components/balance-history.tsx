@@ -6,6 +6,7 @@ import {
 	CartesianGrid,
 	Area,
 } from "recharts";
+import { cn } from "../lib/utils";
 
 const data = [
 	{ month: "Jul", balance: 150 },
@@ -19,7 +20,13 @@ const data = [
 
 export function BalanceHistory() {
 	return (
-		<div className="w-[635px] h-[276px] bg-background rounded-3xl py-[30px] px-[20px]">
+		<div
+			className={cn(
+				"bg-background rounded-3xl",
+				"aspect-[325/223]",
+				"desktop:py-[30px] desktop:px-[20px] desktop:aspect-[635/276]",
+			)}
+		>
 			<ResponsiveContainer className="">
 				<AreaChart
 					data={data}

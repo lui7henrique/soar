@@ -36,7 +36,7 @@ export function RecentTransaction() {
 	};
 
 	return (
-		<ul className="bg-background w-[350px] h-[235px] rounded-[25px] p-6 space-y-2.5 overflow-y-auto">
+		<ul className="bg-background aspect-[350px] h-[235px] rounded-[25px] desktop:p-6 space-y-2.5 overflow-y-auto">
 			{TRANSACTIONS.map((transaction) => (
 				<li
 					className="flex gap-4 items-center justify-between"

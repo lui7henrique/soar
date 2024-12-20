@@ -48,8 +48,8 @@ export function WeeklyActivity() {
 	return (
 		<div
 			className={cn(
-				"bg-background rounded-3xl w-[325px] h-[254px]",
-				"desktop:w-[730px] desktop:h-[322px]",
+				"bg-background rounded-3xl aspect-[325/254]",
+				"desktop:aspect-[730/322] desktop:h-[322px]",
 			)}
 		>
 			<ResponsiveContainer className="desktop:p-8">
