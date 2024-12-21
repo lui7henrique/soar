@@ -38,7 +38,7 @@ export function RecentTransaction() {
 							<p className="text-foreground font-medium text-sm desktop:text-md">
 								{transaction.label}
 							</p>
-							<p className="text-[#718EBF] text-sm desktop:text-md">
+							<p className="text-secondary text-sm desktop:text-md">
 								{transaction.createdAt}
 							</p>
 						</div>

@@ -24,7 +24,7 @@ const renderCustomLegend = (props: Props) => {
 						className="size-[12px] rounded-full"
 						style={{ background: entry.color }}
 					/>
-					<span className="text-[#718EBF] text-xs first-letter:uppercase">
+					<span className="text-secondary text-xs first-letter:uppercase">
 						{entry.value}
 					</span>
 				</span>
@@ -63,14 +63,14 @@ export function WeeklyActivity() {
 						axisLine={false}
 						tickLine={false}
 						tickMargin={8}
-						tick={{ fill: "#718EBF", fontSize: 12, fontWeight: 400 }}
+						tick={{ fill: "var(--secondary)", fontSize: 12, fontWeight: 400 }}
 					/>
 
 					<YAxis
 						axisLine={false}
 						tickLine={false}
 						tickMargin={0}
-						tick={{ fill: "#718EBF", fontSize: 12, fontWeight: 500 }}
+						tick={{ fill: "var(--secondary)", fontSize: 12, fontWeight: 500 }}
 						ticks={[0, 100, 200, 300, 400, 500]}
 						domain={[0, 500]}
 						width={30}

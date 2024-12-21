@@ -28,7 +28,7 @@ export function Header() {
 					<Search />
 
 					<button
-						className="w-[50px] h-[50px] items-center justify-center bg-background-alt rounded-full text-[#718EBF] flex"
+						className="w-[50px] h-[50px] items-center justify-center bg-background-alt rounded-full text-secondary flex"
 						type="button"
 					>
 						{svgs.gear}

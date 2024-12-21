@@ -43,8 +43,8 @@ export function Dashboard() {
 	return (
 		<div
 			className={cn(
-				"gap-8 px-6 pb-6 flex flex-col",
-				"desktop:grid desktop:grid-cols-3 desktop:px-10 desktop:py-6 desktop:max-w-[1180px] desktop:mx-auto",
+				"gap-8 flex flex-col",
+				"desktop:grid desktop:grid-cols-3 desktop:max-w-[1180px] desktop:mx-auto",
 			)}
 		>
 			<Card.Root className="col-span-2">

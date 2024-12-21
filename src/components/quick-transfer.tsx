@@ -47,7 +47,7 @@ export function QuickTransfer() {
 										{person.name}
 									</p>
 
-									<p className="mt-2 text-[#718EBF]">{person.role}</p>
+									<p className="mt-2 text-secondary">{person.role}</p>
 								</div>
 							);
 						})}
@@ -57,7 +57,7 @@ export function QuickTransfer() {
 				<div>
 					<button
 						onClick={scrollNext}
-						className=" bg-white rounded-full shadow-md flex items-center justify-center text-[#718EBF] size-[40px] desktop:size-[50px]"
+						className=" bg-white rounded-full shadow-md flex items-center justify-center text-secondary size-[40px] desktop:size-[50px]"
 						type="button"
 					>
 						{svgs.arrow}
@@ -67,7 +67,7 @@ export function QuickTransfer() {
 
 			<div className="flex gap-4">
 				<div className="flex items-center">
-					<span className="text-[#718EBF] whitespace-nowrap text-xs desktop:text-[16px]">
+					<span className="text-secondary whitespace-nowrap text-xs desktop:text-[16px]">
 						Write Amount
 					</span>
 				</div>
@@ -75,7 +75,7 @@ export function QuickTransfer() {
 				<form className="flex bg-[#EDF1F7] rounded-[50px] relative">
 					<input
 						type="text"
-						className="bg-transparent text-[#718EBF] px-4 py-3 outline-none text-sm desktop:text-[16px] w-full"
+						className="bg-transparent text-secondary px-4 py-3 outline-none text-sm desktop:text-[16px] w-full"
 						placeholder="525.50"
 					/>
 

@@ -30,7 +30,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 							className={cn(
 								"text-xs",
 								variant === "default" && "text-white",
-								variant === "outline" && "text-[#718EBF]",
+								variant === "outline" && "text-secondary",
 							)}
 						>
 							Balance
@@ -62,7 +62,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 							className={cn(
 								"text-xs",
 								variant === "default" && "text-white/70",
-								variant === "outline" && "text-[#718EBF]",
+								variant === "outline" && "text-secondary",
 							)}
 						>
 							CARD HOLDER
@@ -83,7 +83,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 							className={cn(
 								"text-xs",
 								variant === "default" && "text-white/70",
-								variant === "outline" && "text-[#718EBF]",
+								variant === "outline" && "text-secondary",
 							)}
 						>
 							VALID THRU

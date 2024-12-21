@@ -34,7 +34,7 @@ export function BalanceHistory() {
 						dataKey="month"
 						axisLine={false}
 						tickLine={true}
-						tick={{ fill: "#718EBF", fontSize: 12, fontWeight: 400 }}
+						tick={{ fill: "var(--secondary)", fontSize: 12, fontWeight: 400 }}
 					/>
 					<YAxis
 						axisLine={false}
@@ -42,7 +42,7 @@ export function BalanceHistory() {
 						domain={[0, 800]}
 						ticks={[0, 200, 400, 600, 800]}
 						tickMargin={0}
-						tick={{ fill: "#718EBF", fontSize: 12, fontWeight: 500 }}
+						tick={{ fill: "var(--secondary)", fontSize: 12, fontWeight: 500 }}
 						width={30}
 					/>
 
