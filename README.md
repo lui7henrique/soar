@@ -32,7 +32,7 @@ cd soar
 ### 2. Install Dependencies
 
 ```bash
-npm install
+pnpm install
 ```
 
 ### 3. Run the Application
@@ -40,7 +40,7 @@ npm install
 #### Development Server:
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 Visit: [http://localhost:5173](http://localhost:5173)
@@ -48,13 +48,13 @@ Visit: [http://localhost:5173](http://localhost:5173)
 #### Build for Production:
 
 ```bash
-npm run build
+pnpm run build
 ```
 
 #### Preview Production Build:
 
 ```bash
-npm run preview
+pnpm run preview
 ```
 
 ## Technical Stack
