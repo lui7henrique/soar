@@ -33,7 +33,7 @@ const Card = {
 		<span
 			className={cn(
 				className,
-				"font-semibold text-[16px] text-muted-foreground desktop:text-[22px]",
+				"font-semibold text-[17px] text-muted-foreground",
 			)}
 			{...props}
 		/>
