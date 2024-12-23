@@ -83,18 +83,18 @@
 - **Performance**
   - [x] Optimize the application for performance (e.g., lazy loading components).
 - **Accessibility**
-  - [ ] Adhere to basic accessibility standards (ARIA labels, keyboard navigation).
+  - [x] Adhere to basic accessibility standards (ARIA labels, keyboard navigation).
 - **Browser Compatibility**
-  - [ ] Ensure compatibility with Chrome, Firefox, Safari, and Edge.
+  - [x] Ensure compatibility with Chrome, Firefox, Safari, and Edge.
 
 ---
 
 #### **Submission Guidelines**
 
-- [ ] Provide a link to the Git repository with the source code.
-- [ ] Include a README file with setup instructions and assumptions.
-- [ ] Ensure the application can be deployed locally with minimal setup.
-- [ ] Provide a Vercel live demo link for the website.
+- [x] Provide a link to the Git repository with the source code.
+- [x] Include a README file with setup instructions and assumptions.
+- [x] Ensure the application can be deployed locally with minimal setup.
+- [x] Provide a Vercel live demo link for the website.
 
 ---
 
