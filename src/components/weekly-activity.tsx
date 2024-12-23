@@ -33,7 +33,7 @@ const renderCustomLegend = (props: Props) => {
 	);
 };
 
-export function WeeklyActivity() {
+export default function WeeklyActivity() {
 	const isDesktop = useMediaQuery("(min-width: 1280px)");
 
 	return (

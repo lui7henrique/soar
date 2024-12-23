@@ -9,7 +9,7 @@ import {
 import { cn } from "@/lib/utils";
 import { BALANCE_HISTORY } from "@/mocks";
 
-export function BalanceHistory() {
+export default function BalanceHistory() {
 	return (
 		<div
 			className={cn(

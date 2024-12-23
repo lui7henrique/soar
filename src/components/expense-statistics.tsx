@@ -9,7 +9,7 @@ const COLORS = [
 	"hsl(0, 0%, 9%)",
 ];
 
-export function ExpenseStatistics() {
+export default function ExpenseStatistics() {
 	const renderCustomLabel = ({
 		cx,
 		cy,

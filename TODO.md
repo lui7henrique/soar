@@ -2,9 +2,9 @@
 
 #### **Project Overview**
 
-- [ ] Build a financial dashboard application with multiple views.
-- [ ] Ensure responsive design and functionality as per Figma link.
-- [ ] Display an overview of financial activities, card details, transactions, statistics, and user settings.
+- [x] Build a financial dashboard application with multiple views.
+- [x] Ensure responsive design and functionality as per Figma link.
+- [x] Display an overview of financial activities, card details, transactions, statistics, and user settings.
 
 ---
 
@@ -35,11 +35,11 @@
 ##### **Settings Page**
 
 - **Tabs**
-  - [ ] Include "Edit Profile," "Preference," and "Security" tabs.
+  - [x] Include "Edit Profile," "Preference," and "Security" tabs.
 - **Edit Profile Section**
-  - [ ] Allow editing fields (Name, Username, Email, Password, Date of Birth, Present Address, Permanent Address, City, Postal Code, Country).
-  - [ ] Enable profile picture upload/editing.
-  - [ ] Provide a "Save" button to apply changes.
+  - [x] Allow editing fields (Name, Username, Email, Password, Date of Birth, Present Address, Permanent Address, City, Postal Code, Country).
+  - [x] Enable profile picture upload/editing.
+  - [x] Provide a "Save" button to apply changes.
 
 ---
 
@@ -51,7 +51,7 @@
   - [x] Use a library like Chart.js or D3.js for dynamic, interactive charting.
   - [x] Ensure charts dynamically update based on user data.
 - **Interactive Elements**
-  - [ ] Add hover effects and click feedback for buttons ("See All," "Send," "Save").
+  - [x] Add hover effects and click feedback for buttons ("See All," "Send," "Save").
   - [x] Make card and transaction lists scrollable for multiple entries.
 - **Form Validations**
   - [x] Implement validation for settings page (e.g., email format, password complexity).
@@ -65,7 +65,7 @@
 
 - **Frameworks/Libraries**
   - [x] Use React.js as the primary framework.
-  - [ ] Implement state management with Redux or Context API.
+  - [?] Implement state management with Redux or Context API.
   - [x] Use TailwindCSS or styled-components for styling.
 - **API Integration**
   - [x] Mock dummy API endpoints for user information, card details, transaction history, and chart data.
@@ -81,7 +81,7 @@
 #### **Non-Functional Requirements**
 
 - **Performance**
-  - [ ] Optimize the application for performance (e.g., lazy loading components).
+  - [x] Optimize the application for performance (e.g., lazy loading components).
 - **Accessibility**
   - [ ] Adhere to basic accessibility standards (ARIA labels, keyboard navigation).
 - **Browser Compatibility**

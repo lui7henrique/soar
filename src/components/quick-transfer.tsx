@@ -23,7 +23,7 @@ export const quickTransferSchema = z.object({
 
 type QuickTransferFormData = z.infer<typeof quickTransferSchema>;
 
-export function QuickTransfer() {
+export default function QuickTransfer() {
 	const {
 		register,
 		handleSubmit,

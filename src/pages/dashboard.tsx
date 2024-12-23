@@ -1,13 +1,14 @@
-import type { ComponentProps } from "react";
+import { lazy, Suspense, type ComponentProps } from "react";
 import { cn } from "../lib/utils";
 import { Link } from "react-router-dom";
 import { CreditCard } from "@/components/credit-card";
 import { RecentTransaction } from "@/components/recent-transaction";
-import { WeeklyActivity } from "@/components/weekly-activity";
-import { ExpenseStatistics } from "@/components/expense-statistics";
-import { QuickTransfer } from "@/components/quick-transfer";
-import { BalanceHistory } from "@/components/balance-history";
 import { MOCK_CREDIT_CARDS } from "@/mocks";
+
+const WeeklyActivity = lazy(() => import("@/components/weekly-activity"));
+const ExpenseStatistics = lazy(() => import("@/components/expense-statistics"));
+const QuickTransfer = lazy(() => import("@/components/quick-transfer"));
+const BalanceHistory = lazy(() => import("@/components/balance-history"));
 
 const Card = {
 	Root: ({ className, ...props }: ComponentProps<"div">) => (
@@ -50,12 +51,10 @@ export function Dashboard() {
 			<Card.Root className="col-span-2">
 				<Card.Header>
 					<Card.Title>My Cards</Card.Title>
-
 					<Card.Action className="hover:underline">
 						<Link to="/credit-cards">See all</Link>
 					</Card.Action>
 				</Card.Header>
-
 				<div className="flex gap-5 overflow-x-auto scrollbar-hide px-6 -mx-6 desktop:mx-none desktop:px-none desktop:grid desktop:grid-cols-2">
 					{MOCK_CREDIT_CARDS.map((creditCard) => (
 						<CreditCard
@@ -71,7 +70,6 @@ export function Dashboard() {
 				<Card.Header>
 					<Card.Title>Recent Transaction</Card.Title>
 				</Card.Header>
-
 				<RecentTransaction />
 			</Card.Root>
 
@@ -79,16 +77,18 @@ export function Dashboard() {
 				<Card.Header>
 					<Card.Title>Weekly Activity</Card.Title>
 				</Card.Header>
-
-				<WeeklyActivity />
+				<Suspense fallback={<p>Loading Weekly Activity...</p>}>
+					<WeeklyActivity />
+				</Suspense>
 			</Card.Root>
 
 			<Card.Root className="col-span-1">
 				<Card.Header>
 					<Card.Title>Expense Statistics</Card.Title>
 				</Card.Header>
-
-				<ExpenseStatistics />
+				<Suspense fallback={<p>Loading Expense Statistics...</p>}>
+					<ExpenseStatistics />
+				</Suspense>
 			</Card.Root>
 
 			<div
@@ -101,16 +101,18 @@ export function Dashboard() {
 					<Card.Header>
 						<Card.Title>Quick Transfer</Card.Title>
 					</Card.Header>
-
-					<QuickTransfer />
+					<Suspense fallback={<p>Loading Quick Transfer...</p>}>
+						<QuickTransfer />
+					</Suspense>
 				</Card.Root>
 
 				<Card.Root className="col-span-1">
 					<Card.Header>
 						<Card.Title>Balance History</Card.Title>
 					</Card.Header>
-
-					<BalanceHistory />
+					<Suspense fallback={<p>Loading Balance History...</p>}>
+						<BalanceHistory />
+					</Suspense>
 				</Card.Root>
 			</div>
 		</div>
