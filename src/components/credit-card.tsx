@@ -1,17 +1,25 @@
 import type { ComponentProps } from "react";
 import { svgs } from "./icons";
 import { cn } from "@/lib/utils";
+import type { MOCK_CREDIT_CARDS } from "@/mocks";
 
 type CreditCardProps = {
+	data: (typeof MOCK_CREDIT_CARDS)[number];
 	variant?: "default" | "outline";
 } & ComponentProps<"div">;
 
-export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
+export function CreditCard({
+	data,
+	variant = "default",
+	...props
+}: CreditCardProps) {
+	const { balance, holder, validThru, number } = data;
+
 	return (
 		<div
 			className={cn(
 				"rounded-[25px] flex flex-col font-lato flex-shrink-0 w-[265px] h-[170px]",
-				"desktop:w-[350px] desktop:h-[235px]",
+				"desktop:aspect:[350/235] desktop:w-full desktop:h-auto",
 				variant === "outline" && "bg-background border",
 				variant === "default" &&
 					"bg-[linear-gradient(107.38deg,_#5B5A6F_2.61%,_#000000_101.2%)]",
@@ -42,7 +50,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 								variant === "outline" && "text-muted-foreground",
 							)}
 						>
-							$5,756
+							{balance}
 						</p>
 					</div>
 					<figure
@@ -74,7 +82,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 								variant === "outline" && "text-muted-foreground",
 							)}
 						>
-							Eddy Cusuma
+							{holder}
 						</p>
 					</div>
 
@@ -95,7 +103,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 								variant === "outline" && "text-muted-foreground",
 							)}
 						>
-							12/22
+							{validThru}
 						</p>
 					</div>
 				</div>
@@ -114,7 +122,7 @@ export function CreditCard({ variant = "default", ...props }: CreditCardProps) {
 						variant === "default" && "text-white",
 					)}
 				>
-					3778 **** **** 1234
+					{number}
 				</span>
 				<figure
 					className={cn(

@@ -153,7 +153,7 @@ export function QuickTransfer() {
 							className={cn(
 								"absolute right-0 rounded-[50px] bg-foreground text-background flex items-center justify-center gap-2 px-5 py-3 [&>svg]:w-[16px] text-xs",
 								"desktop:px-6 desktop:py-3 desktop:text-[16px] desktop:[&>svg]:w-auto",
-								"disabled:opacity-50 disabled:cursor-not-allowed bg-foreground hover:bg-foreground-dark",
+								"disabled:opacity-50 disabled:cursor-not-allowed bg-foreground hover:opacity-90 transition-all",
 							)}
 							type="submit"
 							disabled={!selectedPersonId || isSubmitting}

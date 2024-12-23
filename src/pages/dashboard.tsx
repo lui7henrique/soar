@@ -51,16 +51,17 @@ export function Dashboard() {
 				<Card.Header>
 					<Card.Title>My Cards</Card.Title>
 
-					<Card.Action>
+					<Card.Action className="hover:underline">
 						<Link to="/credit-cards">See all</Link>
 					</Card.Action>
 				</Card.Header>
 
-				<div className="flex gap-5 overflow-x-auto scrollbar-hide px-6 -mx-6 desktop:mx-none desktop:px-none">
+				<div className="flex gap-5 overflow-x-auto scrollbar-hide px-6 -mx-6 desktop:mx-none desktop:px-none desktop:grid desktop:grid-cols-2">
 					{MOCK_CREDIT_CARDS.map((creditCard) => (
 						<CreditCard
 							variant={creditCard.main ? "default" : "outline"}
 							key={creditCard.id}
+							data={creditCard}
 						/>
 					))}
 				</div>
