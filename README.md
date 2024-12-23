@@ -1,8 +1,77 @@
-- dentro das funcionalidades, nao vi necessidade de adicionar context ou redux
-- se fosse uma aplicação real, eu provavelmente adicionaria:
-  - react query para lidar com requisições
-  - context api para autenticação
-  - testes unitarios e de integração com vitest
-  - um design system consolidado e testado
-  - testes e2e com playwright
-  - revisaria o figma e removeria valores arbitrarios
+# Soar Task
+
+- **Form Handling**: Form validation using `react-hook-form` and `zod`.
+- **Charts**: Interactive data visualizations with `recharts`.
+- **Responsive Design**: Built with `tailwindcss` to ensure adaptability across devices.
+- **Routing**: Navigation handled via `react-router-dom`.
+
+## Future Enhancements
+
+If this were a real-world application, the following improvements would be considered:
+
+- **State Management**: Integrate `react-query` for API requests and `Context API` for authentication.
+- **Testing**: Add unit tests with `vitest`, integration tests, and E2E tests with `playwright`.
+- **Design System**: Implement a consolidated and tested design system.
+- **Loading States**: Refine loading indicators for a better user experience.
+- **Review Design**: Remove arbitrary values and align closely with the Figma designs.
+
+## Requirements
+
+- **Node.js**: >= 16.x
+- **Package Manager**: pnpm
+
+## Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone <repository-url>
+cd soar
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Run the Application
+
+#### Development Server:
+
+```bash
+npm run dev
+```
+
+Visit: [http://localhost:5173](http://localhost:5173)
+
+#### Build for Production:
+
+```bash
+npm run build
+```
+
+#### Preview Production Build:
+
+```bash
+npm run preview
+```
+
+## Technical Stack
+
+- **Framework**: React 18
+- **Styling**: TailwindCSS
+- **Form Validation**: react-hook-form, zod
+- **Charts**: Recharts
+- **Routing**: react-router-dom
+- **Carousel**: Embla-carousel-react
+
+## Development Notes
+
+This application uses `vite` for its fast build process and development environment. TailwindCSS handles styling, and `react-hook-form` simplifies form validation. Ensure your Node.js version is compatible to avoid runtime issues.
+
+## Scripts
+
+- `dev`: Starts the development server.
+- `build`: Builds the application for production.
+- `preview`: Previews the production build.

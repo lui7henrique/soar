@@ -20,7 +20,7 @@ const Card = {
 			{...props}
 		/>
 	),
-	Title: ({ className, ...props }: ComponentProps<"div">) => (
+	Title: ({ className, ...props }: ComponentProps<"h4">) => (
 		<h4
 			className={cn(
 				className,
@@ -29,7 +29,7 @@ const Card = {
 			{...props}
 		/>
 	),
-	Action: ({ className, ...props }: ComponentProps<"div">) => (
+	Action: ({ className, ...props }: ComponentProps<"span">) => (
 		<span
 			className={cn(
 				className,
@@ -37,6 +37,17 @@ const Card = {
 			)}
 			{...props}
 		/>
+	),
+	Loading: ({ className, ...props }: ComponentProps<"div">) => (
+		<span
+			className={cn(
+				className,
+				"flex items-center h-full justify-center bg-background",
+			)}
+			{...props}
+		>
+			Loading
+		</span>
 	),
 };
 
@@ -55,6 +66,7 @@ export function Dashboard() {
 						<Link to="/credit-cards">See all</Link>
 					</Card.Action>
 				</Card.Header>
+
 				<div className="flex gap-5 overflow-x-auto scrollbar-hide px-6 -mx-6 desktop:mx-none desktop:px-none desktop:grid desktop:grid-cols-2">
 					{MOCK_CREDIT_CARDS.map((creditCard) => (
 						<CreditCard
@@ -77,7 +89,8 @@ export function Dashboard() {
 				<Card.Header>
 					<Card.Title>Weekly Activity</Card.Title>
 				</Card.Header>
-				<Suspense fallback={<p>Loading Weekly Activity...</p>}>
+
+				<Suspense fallback={<Card.Loading />}>
 					<WeeklyActivity />
 				</Suspense>
 			</Card.Root>
@@ -86,6 +99,7 @@ export function Dashboard() {
 				<Card.Header>
 					<Card.Title>Expense Statistics</Card.Title>
 				</Card.Header>
+
 				<Suspense fallback={<p>Loading Expense Statistics...</p>}>
 					<ExpenseStatistics />
 				</Suspense>
@@ -101,6 +115,7 @@ export function Dashboard() {
 					<Card.Header>
 						<Card.Title>Quick Transfer</Card.Title>
 					</Card.Header>
+
 					<Suspense fallback={<p>Loading Quick Transfer...</p>}>
 						<QuickTransfer />
 					</Suspense>

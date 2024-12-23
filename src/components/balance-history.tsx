@@ -15,7 +15,7 @@ export default function BalanceHistory() {
 			className={cn(
 				"bg-background rounded-3xl",
 				"aspect-[325/223] max-h-[276px]",
-				"desktop:py-[30px] desktop:px-[20px] desktop:aspect-[635/276]",
+				"desktop:py-[30px] desktop:px-[20px] desktop:aspect-[635/276] w-full",
 			)}
 		>
 			<ResponsiveContainer className="">
