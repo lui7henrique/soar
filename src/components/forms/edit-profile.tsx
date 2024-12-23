@@ -11,6 +11,7 @@ import {
 	type EditProfileFormData,
 	editProfileSchema,
 } from "./edit-profile-schema";
+import { cn } from "@/lib/utils";
 
 const fields = [
 	{ id: "name", label: "Your Name", placeholder: "Charlene Reed" },
@@ -106,10 +107,15 @@ export function EditProfile() {
 
 	return (
 		<form
-			className="space-y-10 flex flex-col"
+			className="space-y-4 desktop:space-y-10 flex flex-col"
 			onSubmit={handleSubmit(onSubmit)}
 		>
-			<div className="flex gap-[57px] pl-[30px] pt-10">
+			<div
+				className={cn(
+					"flex flex-col items-center gap-[22px] pt-[45px]",
+					"desktop:flex-row desktop:gap-[57px] desktop:pl-[30px] desktop:pt-10 desktop:items-start",
+				)}
+			>
 				<div className="relative size-[90px]">
 					<img
 						src={previewImage || user}
@@ -135,13 +141,20 @@ export function EditProfile() {
 					/>
 				</div>
 
-				<div className="grid grid-cols-2 gap-x-[29px] gap-y-[22px] flex-1">
+				<div
+					className={cn(
+						"grid gap-y-[16px]",
+						"desktop:grid-cols-2 desktop:gap-x-[29px] desktop:gap-y-[22px] w-full",
+					)}
+				>
 					{fields.map(({ id, label, type = "text", placeholder }) => {
 						const error = errors[id as keyof EditProfileFormData];
 
 						return (
-							<div key={id} className="space-y-3">
-								<Label htmlFor={id}>{label}</Label>
+							<div key={id} className="space-y-[9px] desktop:space-y-3">
+								<Label htmlFor={id} className="text-[13px] desktop:text-[16px]">
+									{label}
+								</Label>
 
 								<Input
 									id={id}
@@ -165,8 +178,9 @@ export function EditProfile() {
 					})}
 				</div>
 			</div>
+
 			<div className="flex justify-end">
-				<Button disabled={isSubmitting}>
+				<Button disabled={isSubmitting} className="w-full desktop:w-auto">
 					{isSubmitting ? "Saving..." : "Save"}
 				</Button>
 			</div>

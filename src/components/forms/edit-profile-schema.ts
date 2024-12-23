@@ -30,9 +30,9 @@ export const editProfileSchema = z.object({
 		.any()
 		.optional()
 		.refine((file) => {
-			if (!file) return true; // Se não for obrigatório
+			if (!file) return true;
 			const acceptedFormats = ["image/jpeg", "image/png", "image/gif"];
-			const maxSizeInBytes = 5 * 1024 * 1024; // 5MB
+			const maxSizeInBytes = 5 * 1024 * 1024;
 			return (
 				file instanceof File &&
 				acceptedFormats.includes(file.type) &&

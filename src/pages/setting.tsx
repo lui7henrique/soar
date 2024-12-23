@@ -3,9 +3,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export function Setting() {
 	return (
-		<section className="bg-background desktop:max-w-[1180px] desktop:mx-auto rounded-3xl p-[30px]">
+		<section className="my-[25px] p-5 bg-background desktop:max-w-[1180px] desktop:mx-auto rounded-3xl desktop:p-[30px] desktop:my-none">
 			<Tabs defaultValue="edit-profile">
-				<TabsList>
+				<TabsList className="grid grid-cols-3 desktop:flex">
 					<TabsTrigger value="edit-profile">Edit profile</TabsTrigger>
 					<TabsTrigger value="preferences">Preferences</TabsTrigger>
 					<TabsTrigger value="security">Security</TabsTrigger>
@@ -16,11 +16,11 @@ export function Setting() {
 				</TabsContent>
 
 				<TabsContent value="preferences">
-					<p>Preferences (not implemented yet)</p>
+					<div className="h-[65dvh]">Preferences (not implemented yet)</div>
 				</TabsContent>
 
 				<TabsContent value="security">
-					<p>Security (not implemented yet)</p>
+					<div className="h-[65dvh]">Security (not implemented yet)</div>
 				</TabsContent>
 			</Tabs>
 		</section>

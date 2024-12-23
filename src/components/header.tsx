@@ -52,7 +52,9 @@ export function Header() {
 	return (
 		<header className="my-5 mx-[25px] space-y-5">
 			<div className="flex justify-between items-center">
-				<button type="button">{svgs.menu}</button>
+				<Link to="/" type="button">
+					{svgs.menu}
+				</Link>
 
 				<h1 className="text-[20px] font-semibold text-[#343C6A]">
 					{title[pathname as keyof typeof title]}

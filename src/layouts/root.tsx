@@ -10,7 +10,7 @@ export default function RootLayout() {
 			<section className="flex flex-col">
 				<Header />
 
-				<main className="desktop:bg-background-alt desktop:h-[calc(100vh-100px)] overflow-y-auto px-6 pb-6 desktop:px-10 desktop:py-6">
+				<main className="bg-background-alt desktop:h-[calc(100vh-100px)] overflow-y-auto px-6 pb-6 desktop:px-10 desktop:py-6">
 					<Outlet />
 				</main>
 			</section>

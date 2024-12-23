@@ -24,7 +24,7 @@ const Card = {
 		<h4
 			className={cn(
 				className,
-				"font-semibold text-md text-muted-foreground desktop:text-[22px]",
+				"font-semibold text-[16px] text-muted-foreground desktop:text-[22px]",
 			)}
 			{...props}
 		/>
@@ -33,7 +33,7 @@ const Card = {
 		<span
 			className={cn(
 				className,
-				"font-semibold text-md text-muted-foreground desktop:text-[22px]",
+				"font-semibold text-[16px] text-muted-foreground desktop:text-[22px]",
 			)}
 			{...props}
 		/>
@@ -44,8 +44,8 @@ export function Dashboard() {
 	return (
 		<div
 			className={cn(
-				"gap-8 flex flex-col",
-				"desktop:grid desktop:grid-cols-3 desktop:max-w-[1180px] desktop:mx-auto",
+				"bg-background -m-6 p-6 gap-8 flex flex-col",
+				"desktop:grid desktop:grid-cols-3 desktop:max-w-[1180px] desktop:mx-auto desktop:bg-transparent desktop:px-0",
 			)}
 		>
 			<Card.Root className="col-span-2">
