@@ -143,8 +143,8 @@ export function EditProfile() {
 
 				<div
 					className={cn(
-						"grid gap-y-[16px]",
-						"desktop:grid-cols-2 desktop:gap-x-[29px] desktop:gap-y-[22px] w-full",
+						"grid gap-y-[16px] w-full",
+						"desktop:grid-cols-2 desktop:gap-x-[29px] desktop:gap-y-[22px] desktop:flex-1 desktop:w-auto",
 					)}
 				>
 					{fields.map(({ id, label, type = "text", placeholder }) => {
