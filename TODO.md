@@ -52,9 +52,9 @@
   - [x] Ensure charts dynamically update based on user data.
 - **Interactive Elements**
   - [ ] Add hover effects and click feedback for buttons ("See All," "Send," "Save").
-  - [ ] Make card and transaction lists scrollable for multiple entries.
+  - [x] Make card and transaction lists scrollable for multiple entries.
 - **Form Validations**
-  - [ ] Implement validation for settings page (e.g., email format, password complexity).
+  - [x] Implement validation for settings page (e.g., email format, password complexity).
 - **User Experience**
   - [ ] Provide smooth transitions between sections and tabs.
   - [ ] Use consistent icons for visual hierarchy.
