@@ -10,8 +10,8 @@
 If this were a real-world application, the following improvements would be considered:
 
 - **State Management**: Integrate `react-query` for API requests and `Context API` for authentication.
-- **Testing**: Add unit tests with `vitest`, integration tests, and E2E tests with `playwright`.
-- **Design System**: Implement a consolidated and tested design system.
+- **Testing**: Add unit tests and integration tests with `vitest`,and E2E tests with `playwright`.
+- **Design System**: Implement a consolidated and tested design system w/ ready-to-use component.
 - **Loading States**: Refine loading indicators for a better user experience.
 - **Review Design**: Remove arbitrary values and align closely with the Figma designs.
 
