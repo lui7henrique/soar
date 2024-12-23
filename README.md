@@ -1,0 +1,8 @@
+- dentro das funcionalidades, nao vi necessidade de adicionar context ou redux
+- se fosse uma aplicação real, eu provavelmente adicionaria:
+  - react query para lidar com requisições
+  - context api para autenticação
+  - testes unitarios e de integração com vitest
+  - um design system consolidado e testado
+  - testes e2e com playwright
+  - revisaria o figma e removeria valores arbitrarios

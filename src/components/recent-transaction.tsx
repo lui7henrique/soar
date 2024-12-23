@@ -17,7 +17,7 @@ export function RecentTransaction() {
 			{MOCK_TRANSACTIONS.map((transaction) => (
 				<li
 					className="flex gap-4 items-center justify-between"
-					key={transaction.createdAt}
+					key={transaction.id}
 				>
 					<div className="flex gap-4 items-center">
 						<div

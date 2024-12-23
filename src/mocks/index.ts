@@ -27,6 +27,7 @@ export const MOCK_CREDIT_CARDS = [
 
 export const MOCK_TRANSACTIONS = [
 	{
+		id: v4(),
 		label: "Deposit from my Card",
 		createdAt: "28 January 2021",
 		amount: 850,
@@ -34,6 +35,7 @@ export const MOCK_TRANSACTIONS = [
 		category: "CARD",
 	},
 	{
+		id: v4(),
 		label: "Deposit Paypal",
 		createdAt: "25 January 2021",
 		amount: 2500,
@@ -41,6 +43,7 @@ export const MOCK_TRANSACTIONS = [
 		category: "PAYPAL",
 	},
 	{
+		id: v4(),
 		label: "Jemi Wilson",
 		createdAt: "21 January 2021",
 		amount: 5400,
@@ -48,6 +51,7 @@ export const MOCK_TRANSACTIONS = [
 		category: "TRANSFER",
 	},
 	{
+		id: v4(),
 		label: "Jemi Wilson",
 		createdAt: "21 January 2021",
 		amount: 5400,
