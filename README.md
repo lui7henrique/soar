@@ -13,7 +13,7 @@ If this were a real-world application, the following improvements would be consi
 - **Testing**: Add unit tests and integration tests with `vitest`,and E2E tests with `playwright`.
 - **Design System**: Implement a consolidated and tested design system w/ ready-to-use component.
 - **Loading States**: Refine loading indicators for a better user experience.
-- **Review Design**: Remove arbitrary values and align closely with the Figma designs.
+- **Review Design**: Examine the design values in Figma, remove arbitrary values, and use values that adhere to the multiples of 8 rule, among other guidelines.
 
 ## Requirements
 
