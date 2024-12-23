@@ -56,8 +56,8 @@
 - **Form Validations**
   - [x] Implement validation for settings page (e.g., email format, password complexity).
 - **User Experience**
-  - [ ] Provide smooth transitions between sections and tabs.
-  - [ ] Use consistent icons for visual hierarchy.
+  - [x] Provide smooth transitions between sections and tabs.
+  - [x] Use consistent icons for visual hierarchy.
 
 ---
 
